@@ -35,7 +35,7 @@
 ![Login Screen](frontend/public/assets/images/login.png)
 
 ### Main Application
-![Interior Designer 3D](frontend/public/assets/images/Interior%20Designer%203D.png)
+![Interior Designer 3D](frontend/public/assets/images/Interior-Designer-3D.png)
 
 ## 🚀 Getting Started
 
