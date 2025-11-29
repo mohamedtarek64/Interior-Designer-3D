@@ -1,0 +1,46 @@
+.color-picker {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.color-picker__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.color-picker__header h3 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.color-picker__value {
+  font-size: 0.85rem;
+  color: #475569;
+}
+
+.color-picker__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(36px, 1fr));
+  gap: 0.5rem;
+}
+
+.color-picker__swatch {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 12px;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.color-picker__swatch:hover {
+  transform: translateY(-1px);
+}
+
+.color-picker__swatch--selected {
+  border-color: rgba(15, 23, 42, 0.65);
+}

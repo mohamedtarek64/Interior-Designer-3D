@@ -1,0 +1,40 @@
+@import './base/reset.css';
+
+:root {
+  font-family: 'Manrope', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  color: #1f2933;
+  background-color: #f4f7fb;
+  line-height: 1.5;
+
+  /* Primary color */
+  --color-primary: #d0bb95;
+  --color-primary-hover: rgba(208, 187, 149, 0.9);
+  --color-primary-focus: rgba(208, 187, 149, 0.5);
+
+  /* Background colors */
+  --color-bg-light: #f7f7f6;
+  --color-bg-dark: #1d1a15;
+}
+
+body {
+  margin: 0;
+}
+
+#app {
+  min-height: 100vh;
+}
+
+/* Material Symbols Outlined font settings */
+.material-symbols-outlined {
+  font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24;
+}
+
+/* Dark mode support */
+[data-theme="dark"] {
+  color-scheme: dark;
+}
+</style>

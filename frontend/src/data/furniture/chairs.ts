@@ -1,0 +1,32 @@
+export const chairs = [
+  {
+    id: 'chair-001',
+    name: 'Modern Lounge Chair',
+    thumbnail: '/assets/images/chair.png',
+    category: 'chair',
+    materials: ['fabric-soft-blue', 'metal-brushed'],
+    tags: ['modern', 'living-room'],
+    sourceType: 'procedural' as const,
+    proceduralId: 'chair-modern',
+  },
+  {
+    id: 'chair-002',
+    name: 'Cozy Accent Chair',
+    thumbnail: '/assets/images/chair.png',
+    category: 'chair',
+    materials: ['fabric-soft-blue'],
+    tags: ['accent', 'living-room'],
+    sourceType: 'procedural' as const,
+    proceduralId: 'chair-accent',
+  },
+  {
+    id: 'chair-003',
+    name: 'Minimal Dining Chair',
+    thumbnail: '/assets/images/chair.png',
+    category: 'chair',
+    materials: ['wood-oak', 'metal-brushed'],
+    tags: ['dining-room', 'minimal'],
+    sourceType: 'procedural' as const,
+    proceduralId: 'chair-dining',
+  },
+];

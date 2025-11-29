@@ -1,0 +1,59 @@
+.home-view {
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+}
+
+.home-view__hero {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.home-view__hero-content h1 {
+  font-size: clamp(2.25rem, 4vw, 3.2rem);
+  margin: 0;
+  color: #0f172a;
+}
+
+.home-view__hero-content p {
+  font-size: 1.05rem;
+  color: #475569;
+  max-width: 32rem;
+  margin: 1rem 0 0;
+}
+
+.home-view__cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.home-view__hero-visual {
+  aspect-ratio: 4 / 3;
+  border-radius: 32px;
+  background: radial-gradient(circle at 30% 20%, rgba(59, 130, 246, 0.2), transparent),
+    radial-gradient(circle at 70% 70%, rgba(16, 185, 129, 0.18), transparent),
+    url('/assets/images/sofa.png') center/cover no-repeat;
+  box-shadow: 0 35px 80px rgba(15, 23, 42, 0.18);
+}
+
+.home-view__features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.75rem;
+}
+
+.home-view__features h2 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #0f172a;
+}
+
+.home-view__features p {
+  margin: 0.6rem 0 0;
+  color: #475569;
+  line-height: 1.6;
+}

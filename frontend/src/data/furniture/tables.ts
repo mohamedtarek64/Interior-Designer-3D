@@ -1,0 +1,32 @@
+export const tables = [
+  {
+    id: 'table-001',
+    name: 'Oak Dining Table',
+    thumbnail: '/assets/images/table.png',
+    category: 'table',
+    materials: ['wood-oak', 'metal-brushed'],
+    tags: ['dining-room'],
+    sourceType: 'procedural' as const,
+    proceduralId: 'table-dining',
+  },
+  {
+    id: 'table-002',
+    name: 'Glass Coffee Table',
+    thumbnail: '/assets/images/table.png',
+    category: 'table',
+    materials: ['metal-brushed'],
+    tags: ['living-room', 'coffee-table'],
+    sourceType: 'procedural' as const,
+    proceduralId: 'table-coffee',
+  },
+  {
+    id: 'table-003',
+    name: 'Workspace Desk',
+    thumbnail: '/assets/images/table.png',
+    category: 'table',
+    materials: ['wood-oak'],
+    tags: ['workspace', 'office'],
+    sourceType: 'procedural' as const,
+    proceduralId: 'table-desk',
+  },
+];

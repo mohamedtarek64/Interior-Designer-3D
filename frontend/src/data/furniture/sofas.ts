@@ -1,0 +1,32 @@
+export const sofas = [
+  {
+    id: 'sofa-001',
+    name: 'L-Shape Sofa',
+    thumbnail: '/assets/images/sofa.png',
+    category: 'sofa',
+    materials: ['fabric-soft-blue'],
+    tags: ['living-room', 'family'],
+    sourceType: 'procedural' as const,
+    proceduralId: 'sofa-sectional',
+  },
+  {
+    id: 'sofa-002',
+    name: 'Modern Two-Seater',
+    thumbnail: '/assets/images/sofa.png',
+    category: 'sofa',
+    materials: ['fabric-soft-blue'],
+    tags: ['modern', 'living-room'],
+    sourceType: 'procedural' as const,
+    proceduralId: 'sofa-two-seater',
+  },
+  {
+    id: 'sofa-003',
+    name: 'Lounge Chaise',
+    thumbnail: '/assets/images/sofa.png',
+    category: 'sofa',
+    materials: ['fabric-soft-blue'],
+    tags: ['lounge', 'relax'],
+    sourceType: 'procedural' as const,
+    proceduralId: 'sofa-chaise',
+  },
+];
