@@ -33,38 +33,58 @@ const handleSubmit = (payload: {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 60vh;
+  min-height: 80vh;
+  padding: 4rem 2rem;
+  background-color: #f8fafc;
 }
 
 .auth-view__card {
-  width: min(420px, 90vw);
-  gap: 1.5rem;
+  width: 100%;
+  max-width: 480px;
+  padding: 3rem !important;
+  animation: slideUp 0.6s ease-out;
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.auth-view__header {
+  margin-bottom: 2.5rem;
+  text-align: center;
 }
 
 .auth-view__header h1 {
   margin: 0;
-  font-size: 1.8rem;
+  font-size: 2.25rem;
+  font-weight: 800;
   color: #0f172a;
+  letter-spacing: -0.04em;
 }
 
 .auth-view__header p {
-  margin: 0.5rem 0 0;
-  color: #475569;
+  margin: 0.75rem 0 0;
+  color: #64748b;
+  font-size: 1.1rem;
 }
 
 .auth-view__footer {
-  margin: 0;
+  margin-top: 2rem;
   text-align: center;
-  font-size: 0.9rem;
-  color: #475569;
+  font-size: 1rem;
+  color: #64748b;
 }
 
 .auth-view__footer a {
-  color: #2563eb;
+  color: #3b82f6;
   text-decoration: none;
+  font-weight: 600;
+  margin-left: 0.25rem;
 }
 
 .auth-view__footer a:hover {
+  color: #2563eb;
   text-decoration: underline;
 }
 </style>
