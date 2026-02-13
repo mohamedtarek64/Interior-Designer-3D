@@ -20,6 +20,10 @@ const activeLayout = computed(() => {
 
 <template>
   <component :is="activeLayout">
-    <RouterView />
+    <RouterView v-slot="{ Component }">
+      <transition name="page" mode="out-in">
+        <component :is="Component" />
+      </transition>
+    </RouterView>
   </component>
 </template>
