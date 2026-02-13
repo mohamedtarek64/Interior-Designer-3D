@@ -23,24 +23,26 @@ const paddingClass = props.padding ? `base-card--${props.padding}` : 'base-card-
 <style scoped>
 .base-card {
   background: #ffffff;
-  border-radius: 16px;
+  border-radius: 24px;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
-  color: #0f172a;
-  transition: box-shadow 0.2s ease, transform 0.2s ease;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+  position: relative;
 }
 
 .base-card--bordered {
-  border: 1px solid rgba(15, 23, 42, 0.08);
+  border: 1px solid rgba(15, 23, 42, 0.06);
 }
 
 .base-card--elevated {
-  box-shadow: 0 20px 45px rgba(15, 23, 42, 0.1);
+  box-shadow: 0 10px 30px -10px rgba(15, 23, 42, 0.08);
 }
 
 .base-card--elevated:hover {
-  transform: translateY(-2px);
+  transform: translateY(-8px);
+  box-shadow: 0 25px 50px -12px rgba(15, 23, 42, 0.15);
+  border-color: rgba(37, 99, 235, 0.1);
 }
 
 .base-card--none {
@@ -48,14 +50,14 @@ const paddingClass = props.padding ? `base-card--${props.padding}` : 'base-card-
 }
 
 .base-card--sm {
-  padding: 1rem;
+  padding: 1.25rem;
 }
 
 .base-card--md {
-  padding: 1.5rem;
+  padding: 2rem;
 }
 
 .base-card--lg {
-  padding: 2.25rem;
+  padding: 3rem;
 }
 </style>
