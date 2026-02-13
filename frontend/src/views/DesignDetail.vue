@@ -53,11 +53,19 @@ onBeforeUnmount(() => {
         <p class="design-detail__eyebrow">Interior preset</p>
         <h1>{{ design.name }}</h1>
         <p class="design-detail__meta">
+          <span class="material-symbols-outlined" style="font-size: 18px;">schedule</span>
           Updated {{ new Date(design.updatedAt).toLocaleDateString() }}
         </p>
       </div>
       <div class="design-detail__header-actions">
-        <BaseButton variant="ghost" @click="router.back()">Back</BaseButton>
+        <BaseButton variant="ghost" @click="router.back()">
+          <span class="material-symbols-outlined" style="font-size: 18px;">arrow_back</span>
+          Back
+        </BaseButton>
+        <BaseButton variant="primary">
+          <span class="material-symbols-outlined" style="font-size: 18px;">edit</span>
+          Edit in Editor
+        </BaseButton>
       </div>
     </header>
 
@@ -73,26 +81,47 @@ onBeforeUnmount(() => {
 
       <aside class="design-detail__info">
         <BaseCard bordered padding="md">
-          <h2>Scene summary</h2>
+          <h2>
+            <span class="material-symbols-outlined" style="font-size: 22px; color: #3b82f6;">summarize</span>
+            Scene summary
+          </h2>
           <ul>
-            <li><strong>Furniture objects:</strong> {{ sceneStore.furnitureCount }}</li>
-            <li><strong>Grid snapping:</strong> {{ sceneStore.snapping ? 'Enabled' : 'Disabled' }}</li>
-            <li><strong>Lighting preset:</strong> {{ sceneStore.lighting.environment }}</li>
+            <li><strong>Furniture objects:</strong> <span>{{ sceneStore.furnitureCount }}</span></li>
+            <li><strong>Grid snapping:</strong> <span>{{ sceneStore.snapping ? 'Enabled' : 'Disabled' }}</span></li>
+            <li><strong>Lighting preset:</strong> <span>{{ sceneStore.lighting.environment }}</span></li>
           </ul>
         </BaseCard>
 
         <BaseCard bordered padding="md">
-          <h2>Next steps</h2>
+          <h2>
+            <span class="material-symbols-outlined" style="font-size: 22px; color: #3b82f6;">rocket_launch</span>
+            Next steps
+          </h2>
           <p>
             Clone this preset into the editor to tweak furniture positions, try different materials, or export
             renders for your presentation deck.
           </p>
+          <BaseButton variant="secondary" size="sm" style="margin-top: 1rem;">
+            Clone to Editor
+          </BaseButton>
+        </BaseCard>
+
+        <BaseCard bordered padding="md">
+          <h2>
+            <span class="material-symbols-outlined" style="font-size: 22px; color: #3b82f6;">share</span>
+            Share
+          </h2>
+          <p>Share this design with your team or clients for feedback.</p>
+          <BaseButton variant="ghost" size="sm" style="margin-top: 1rem;">
+            Copy Share Link
+          </BaseButton>
         </BaseCard>
       </aside>
     </section>
   </div>
 
   <div v-else class="design-detail__loading">
+    <div class="loading-spinner"></div>
     <p>Loading design…</p>
   </div>
 </template>
