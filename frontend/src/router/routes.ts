@@ -88,6 +88,15 @@ const routes: RouteRecordRaw[] = [
     },
   },
   {
+    path: '/editor',
+    name: 'editor',
+    component: () => import('@/views/Editor.vue'),
+    meta: {
+      layout: 'main',
+      title: '3D Scene Editor',
+    },
+  },
+  {
     path: '/:pathMatch(.*)*',
     name: 'not-found',
     component: () => import('@/views/NotFound.vue'),
