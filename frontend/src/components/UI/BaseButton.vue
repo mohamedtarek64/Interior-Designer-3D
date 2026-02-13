@@ -42,14 +42,14 @@ const classes = computed(() => {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 0.5rem;
-  border-radius: 999px;
-  border: none;
+  gap: 0.75rem;
+  border-radius: 12px;
+  border: 1px solid transparent;
   font-weight: 600;
   cursor: pointer;
   text-decoration: none;
-  transition: all 0.2s ease;
-  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.2);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  white-space: nowrap;
 }
 
 .base-button--block {
@@ -58,52 +58,57 @@ const classes = computed(() => {
 
 .base-button--primary {
   background: linear-gradient(135deg, #3b82f6, #2563eb);
-  color: #f8fafc;
+  color: #ffffff;
+  box-shadow: 0 10px 20px -5px rgba(37, 99, 235, 0.3);
+}
+
+.base-button--primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 30px -5px rgba(37, 99, 235, 0.4);
+  filter: brightness(1.1);
 }
 
 .base-button--secondary {
-  background: rgba(15, 23, 42, 0.12);
-  color: #1f2937;
-  border: 1px solid rgba(15, 23, 42, 0.1);
-  box-shadow: none;
+  background: #ffffff;
+  color: #0f172a;
+  border-color: rgba(15, 23, 42, 0.1);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.base-button--secondary:hover {
+  background: #f8fafc;
+  border-color: rgba(15, 23, 42, 0.2);
+  transform: translateY(-2px);
 }
 
 .base-button--ghost {
   background: transparent;
-  color: #2563eb;
-  box-shadow: none;
-}
-
-.base-button--primary:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 12px 30px rgba(37, 99, 235, 0.3);
-}
-
-.base-button--secondary:hover {
-  background: rgba(15, 23, 42, 0.16);
+  color: #475569;
 }
 
 .base-button--ghost:hover {
-  color: #1d4ed8;
+  background: rgba(15, 23, 42, 0.05);
+  color: #0f172a;
 }
 
 .base-button--sm {
-  padding: 0.35rem 0.9rem;
-  font-size: 0.85rem;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
 }
 
 .base-button--md {
-  padding: 0.55rem 1.2rem;
-  font-size: 0.95rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
 }
 
 .base-button--lg {
-  padding: 0.75rem 1.5rem;
-  font-size: 1.05rem;
+  padding: 1rem 2rem;
+  font-size: 1.125rem;
 }
 
 .is-disabled {
-  opacity: 0.6;
+  opacity: 0.5;
   pointer-events: none;
+  filter: grayscale(1);
 }
 </style>
