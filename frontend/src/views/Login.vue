@@ -46,66 +46,51 @@ const handleSubmit = async (payload: { email: string; password: string }) => {
 <style scoped>
 .login-view {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1.2fr 1fr;
   min-height: 100vh;
   width: 100%;
-  overflow-x: hidden;
-  font-family: 'Manrope', sans-serif;
-  background-color: #f7f7f6;
-}
-
-[data-theme="dark"] .login-view {
-  background-color: #1d1a15;
+  background-color: #ffffff;
 }
 
 /* Image Panel */
 .login-view__image-panel {
   position: relative;
-  display: none;
+  display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  width: 100%;
-}
-
-@media (min-width: 1024px) {
-  .login-view {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .login-view__image-panel {
-    display: flex;
-  }
+  padding: 4rem;
+  overflow: hidden;
 }
 
 .login-view__background-image {
   position: absolute;
   inset: 0;
-  background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD41LFrTCyQTszyBziNmOxaytuuNB2qDMPCB25PsmzQGA34lEPn3xvnTz61voCGnpHsTQF3gk8zMRsdnczE951hdFXnOpfh8wjWuMvqGsur6o6KyjMURsE5k-4cAM9Gb5smmgF5WdxH1v5n49hNhDjypQ0Taelpsbko46cmYLH7kNYlAqquqyXPCLl_E2Ue-RM-pjQbpfgA2hUUPKYyhAHUS7Teq6WTy7CnzCQmSVbRQb-47tiWPx_BMstBBlRjdNl20fUnXEqYzr2p');
+  background-image: url('https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&q=80&w=2000');
   background-position: center;
-  background-repeat: no-repeat;
   background-size: cover;
+  transition: transform 10s ease;
+}
+
+.login-view__image-panel:hover .login-view__background-image {
+  transform: scale(1.05);
 }
 
 .login-view__overlay {
   position: absolute;
   inset: 0;
-  background-color: rgba(0, 0, 0, 0.3);
+  background: linear-gradient(to right, rgba(15, 23, 42, 0.4), transparent);
 }
 
 .login-view__brand {
-  position: absolute;
-  top: 2rem;
-  left: 2rem;
+  position: relative;
   z-index: 10;
 }
 
 .login-view__brand-text {
   margin: 0;
-  color: rgb(255 255 255);
-  font-size: 1.125rem;
-  font-weight: 700;
+  color: #ffffff;
+  font-size: 1.75rem;
+  font-weight: 800;
+  letter-spacing: -0.04em;
 }
 
 /* Form Panel */
@@ -113,60 +98,50 @@ const handleSubmit = async (payload: { email: string; password: string }) => {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
-  padding: 2rem;
-  background-color: #f7f7f6;
-}
-
-[data-theme="dark"] .login-view__form-panel {
-  background-color: #1d1a15;
-}
-
-@media (min-width: 640px) {
-  .login-view__form-panel {
-    padding: 3rem;
-  }
-}
-
-@media (min-width: 1024px) {
-  .login-view__form-panel {
-    padding: 4rem;
-  }
+  padding: 4rem;
+  background-color: #f8fafc;
 }
 
 .login-view__form-container {
   width: 100%;
-  max-width: 28rem;
+  max-width: 400px;
+  animation: fadeIn 0.6s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateX(20px); }
+  to { opacity: 1; transform: translateX(0); }
 }
 
 .login-view__header {
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 }
 
 .login-view__title {
   margin: 0;
-  margin-bottom: 0.5rem;
-  color: rgb(15 23 42);
-  font-size: 1.875rem;
-  font-weight: 700;
-  line-height: 1.2;
-  letter-spacing: -0.025em;
-  text-align: left;
-}
-
-[data-theme="dark"] .login-view__title {
-  color: rgb(255 255 255);
+  color: #0f172a;
+  font-size: 2.5rem;
+  font-weight: 800;
+  letter-spacing: -0.04em;
 }
 
 .login-view__subtitle {
-  margin: 0;
-  color: rgb(71 85 105);
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 1.5;
+  margin: 0.75rem 0 0;
+  color: #64748b;
+  font-size: 1.1rem;
 }
 
-[data-theme="dark"] .login-view__subtitle {
-  color: rgb(148 163 184);
+@media (max-width: 1024px) {
+  .login-view {
+    grid-template-columns: 1fr;
+  }
+
+  .login-view__image-panel {
+    display: none;
+  }
+
+  .login-view__form-panel {
+    padding: 2rem;
+  }
 }
 </style>
