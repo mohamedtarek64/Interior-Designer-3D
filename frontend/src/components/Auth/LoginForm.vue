@@ -87,7 +87,7 @@ const togglePasswordVisibility = () => {
 .login-form {
   display: flex;
   flex-direction: column;
-  gap: 1.25rem;
+  gap: 1.5rem;
 }
 
 .login-form__field {
@@ -122,30 +122,32 @@ const togglePasswordVisibility = () => {
 }
 
 .login-form__forgot-link {
-  color: #d0bb95;
+  color: #3b82f6;
   font-size: 0.875rem;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1.5;
   text-decoration: none;
-  transition: text-decoration 0.2s;
+  transition: color 0.2s;
 }
 
 .login-form__forgot-link:hover {
+  color: #2563eb;
   text-decoration: underline;
 }
 
 .login-form__input {
   width: 100%;
-  height: 3rem;
-  padding: 0 1rem;
-  border: 1px solid rgb(203 213 225);
-  border-radius: 0.5rem;
-  background-color: rgb(255 255 255);
-  color: rgb(15 23 42);
+  height: 3.25rem;
+  padding: 0 1.25rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 14px;
+  background-color: #f8fafc;
+  color: #0f172a;
   font-size: 1rem;
+  font-family: inherit;
   font-weight: 400;
   line-height: 1.5;
-  transition: all 0.2s;
+  transition: all 0.25s;
 }
 
 .login-form__input::placeholder {
@@ -164,8 +166,9 @@ const togglePasswordVisibility = () => {
 
 .login-form__input:focus {
   outline: none;
-  border-color: #d0bb95;
-  box-shadow: 0 0 0 2px rgba(208, 187, 149, 0.5);
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.12);
+  background-color: #ffffff;
 }
 
 [data-theme="dark"] .login-form__input:focus {
@@ -204,7 +207,7 @@ const togglePasswordVisibility = () => {
 }
 
 .login-form__password-toggle:hover {
-  color: #d0bb95;
+  color: #3b82f6;
 }
 
 .login-form__password-toggle .material-symbols-outlined {
@@ -221,31 +224,31 @@ const togglePasswordVisibility = () => {
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 3rem;
-  margin-top: 2rem;
+  height: 3.25rem;
+  margin-top: 1.5rem;
   border: none;
-  border-radius: 0.5rem;
-  background-color: #d0bb95;
-  color: rgb(255 255 255);
+  border-radius: 14px;
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  color: #ffffff;
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: 700;
+  font-family: inherit;
   line-height: 1.5;
   text-align: center;
   cursor: pointer;
-  transition: background-color 0.2s, box-shadow 0.2s;
+  transition: all 0.25s;
+  box-shadow: 0 10px 20px -5px rgba(37, 99, 235, 0.3);
 }
 
 .login-form__submit:hover {
-  background-color: rgba(208, 187, 149, 0.9);
+  transform: translateY(-1px);
+  box-shadow: 0 15px 30px -5px rgba(37, 99, 235, 0.4);
+  filter: brightness(1.05);
 }
 
 .login-form__submit:focus {
   outline: none;
-  box-shadow: 0 0 0 2px rgba(208, 187, 149, 0.5);
-}
-
-[data-theme="dark"] .login-form__submit:focus {
-  box-shadow: 0 0 0 2px rgba(208, 187, 149, 0.5);
+  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.2);
 }
 
 .login-form__footer {
@@ -264,13 +267,14 @@ const togglePasswordVisibility = () => {
 
 .login-form__signup-link {
   margin-left: 0.25rem;
-  color: #d0bb95;
+  color: #3b82f6;
   font-weight: 600;
   text-decoration: none;
-  transition: text-decoration 0.2s;
+  transition: color 0.2s;
 }
 
 .login-form__signup-link:hover {
+  color: #2563eb;
   text-decoration: underline;
 }
 </style>
