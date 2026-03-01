@@ -34,7 +34,7 @@ const routes: RouteRecordRaw[] = [
     component: () => import('@/views/MyDesigns.vue'),
     meta: {
       layout: 'main',
-      requiresAuth: false,
+      requiresAuth: true,
       title: 'My Designs',
     },
   },
@@ -53,7 +53,7 @@ const routes: RouteRecordRaw[] = [
     component: () => import('@/views/Profile.vue'),
     meta: {
       layout: 'main',
-      requiresAuth: false,
+      requiresAuth: true,
       title: 'Profile',
     },
   },
