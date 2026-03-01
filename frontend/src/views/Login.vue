@@ -1,19 +1,5 @@
 <script setup lang="ts">
-import { LoginForm } from '@/components/Auth';
-import { useAuthStore } from '@/stores/auth.store';
-import { useRouter } from 'vue-router';
-
-const authStore = useAuthStore();
-const router = useRouter();
-
-const handleSubmit = async (payload: { email: string; password: string }) => {
-  try {
-    await authStore.login(payload.email, payload.password);
-    router.push('/');
-  } catch (error) {
-    console.error('Login failed:', error);
-  }
-};
+import { LoginForm } from '../components/Auth';
 </script>
 
 <template>
@@ -35,9 +21,9 @@ const handleSubmit = async (payload: { email: string; password: string }) => {
       <div class="login-view__form-container">
         <header class="login-view__header">
           <h1 class="login-view__title">Welcome Back</h1>
-          <p class="login-view__subtitle">Sign in to continue to your projects.</p>
+          <p class="login-view__subtitle">Sign in to continue exploring your designs.</p>
         </header>
-        <LoginForm @submit="handleSubmit" />
+        <LoginForm />
       </div>
     </div>
   </div>
