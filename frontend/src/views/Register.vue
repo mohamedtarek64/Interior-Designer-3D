@@ -1,29 +1,16 @@
 <script setup lang="ts">
-import { RegisterForm } from '@/components/Auth';
-import { BaseCard } from '@/components/UI';
-
-const handleSubmit = (payload: {
-  name: string;
-  email: string;
-  password: string;
-  confirmPassword: string;
-}) => {
-  console.log('Register submit', payload);
-};
+import { RegisterForm } from '../components/Auth';
+import BaseCard from '../components/UI/BaseCard.vue';
 </script>
 
 <template>
   <div class="auth-view">
     <BaseCard bordered elevated class="auth-view__card">
       <header class="auth-view__header">
-        <h1>Create your account</h1>
-        <p>Join the community and start building beautiful spaces.</p>
+        <h1>Create Account</h1>
+        <p>Start your interior design journey today.</p>
       </header>
-      <RegisterForm @submit="handleSubmit" />
-      <p class="auth-view__footer">
-        Already have an account?
-        <RouterLink to="/login">Sign in</RouterLink>
-      </p>
+      <RegisterForm />
     </BaseCard>
   </div>
 </template>
@@ -33,8 +20,8 @@ const handleSubmit = (payload: {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 80vh;
-  padding: 4rem 2rem;
+  min-height: 100vh;
+  padding: 2rem;
   background-color: #f8fafc;
 }
 
@@ -67,24 +54,5 @@ const handleSubmit = (payload: {
   margin: 0.75rem 0 0;
   color: #64748b;
   font-size: 1.1rem;
-}
-
-.auth-view__footer {
-  margin-top: 2rem;
-  text-align: center;
-  font-size: 1rem;
-  color: #64748b;
-}
-
-.auth-view__footer a {
-  color: #3b82f6;
-  text-decoration: none;
-  font-weight: 600;
-  margin-left: 0.25rem;
-}
-
-.auth-view__footer a:hover {
-  color: #2563eb;
-  text-decoration: underline;
 }
 </style>
