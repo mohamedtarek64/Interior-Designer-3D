@@ -1,14 +1,8 @@
-export interface UserProfile {
-  id: string;
+export interface User {
+  id: number;
   name: string;
   email: string;
-  avatarUrl?: string;
-  role?: 'designer' | 'viewer' | 'admin';
-  createdAt?: string;
-}
-
-export interface AuthTokens {
-  accessToken: string;
-  refreshToken?: string;
-  expiresAt?: string;
+  email_verified_at: string | null;
+  created_at: string;
+  updated_at: string;
 }
